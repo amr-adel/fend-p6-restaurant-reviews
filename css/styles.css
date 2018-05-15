@@ -40,6 +40,10 @@ html {
     font-size: 62.5%;
 }
 
+::-moz-focus-inner {
+    border: none;
+}
+
 body,
 td,
 th,
@@ -138,12 +142,14 @@ nav h1 a:hover {
 }
 
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 0 3rem;
     list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    width: calc(50% - 80px);
+    background-color: var(--beige);
+    border-bottom: 1px solid var(--prim);
+    font-size: 1.8rem;
+    line-height: 4.8rem;
+    width: 100%;
+    height: 4.8rem;
 }
 
 /* Display list items side by side */
@@ -153,20 +159,19 @@ nav h1 a:hover {
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li + li:before {
-    padding: 8px;
-    color: black;
+    padding: 1rem;
+    color: var(--prim);
     content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+    color: var(--scnd-dark);
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
+    color: var(--scnd-light);
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
@@ -289,7 +294,7 @@ select:focus {
 }
 
 /* ====================== Restaurant Details ====================== */
-.inside header {
+/* .inside header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -312,72 +317,125 @@ select:focus {
     bottom: 0;
     position: absolute;
     width: 50%;
+} */
+
+#restaurant-container::after {
+    content: '';
+    display: table;
+    clear: both;
 }
+
 #restaurant-name {
-    color: #f18200;
-    font-size: 20pt;
-    font-weight: 200;
-    letter-spacing: 0;
-    margin: 15px 0 30px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
     text-transform: uppercase;
-    line-height: 1.1;
+    text-align: center;
+    padding: 0 3rem;
+    line-height: 8rem;
+    color: var(--beige);
+    background-color: var(--prim);
+    border-top: 1px solid var(--beige);
 }
 #restaurant-img {
-    width: 90%;
-}
-#restaurant-address {
-    font-size: 12pt;
-    margin: 10px 0px;
+    width: calc(50% - 6rem);
+    margin: 3rem;
+    float: left;
+    border-radius: 3px;
 }
 #restaurant-cuisine {
-    background-color: #333;
-    color: #ddd;
-    font-size: 12pt;
-    font-weight: 300;
-    letter-spacing: 10px;
-    margin: 0 0 20px;
-    padding: 2px 0;
-    text-align: center;
+    background-color: var(--scnd-light);
+    color: var(--beige);
+    font-size: 1.6rem;
+    margin: 3rem 3rem 0 0;
+    padding: 1rem 4rem;
     text-transform: uppercase;
-    width: 90%;
+    letter-spacing: .5rem;
+    border-radius: 3px;
+    float: left;
 }
-#restaurant-container,
-#reviews-container {
-    border-bottom: 1px solid #d9d9d9;
-    border-top: 1px solid #fff;
-    padding: 140px 40px 30px;
-    width: 50%;
+#restaurant-address {
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--prim);
+    width: calc(50% - 3rem);
+    margin: 3rem 3rem 0 0;
 }
-#reviews-container {
-    padding: 30px 40px 80px;
-}
-#reviews-container h2 {
-    color: #f58500;
-    font-size: 24pt;
-    font-weight: 300;
-    letter-spacing: -1px;
-    padding-bottom: 1pt;
-}
-#reviews-list {
-    margin: 0;
-    padding: 0;
-}
-#reviews-list li {
-    background-color: #fff;
-    border: 2px solid #f3f3f3;
-    display: block;
-    list-style-type: none;
-    margin: 0 0 30px;
-    overflow: hidden;
-    padding: 0 20px 20px;
-    position: relative;
-    width: 85%;
-}
-#reviews-list li p {
-    margin: 0 0 10px;
+#restaurant-hours {
+    width: calc(50% - 3rem);
+    float: left;
+    margin: 3rem 3rem 0 0;
+    border-spacing: 0;
 }
 #restaurant-hours td {
-    color: #666;
+    color: var(--grey-dark);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--scnd-light);
+}
+#reviews-container {
+    padding: 3rem;
+    width: 100%;
+}
+#reviews-container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    font-family: var(--sans);
+    text-align: left;
+    padding: 0 3rem;
+    line-height: 6rem;
+    background-color: var(--beige);
+    color: var(--prim);
+    border-left: 1rem solid var(--prim);
+    border-radius: 3px;
+    margin-bottom: 3rem;
+}
+#reviews-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+#reviews-list li {
+    width: calc(33.3333% - 2rem);
+    background-color: #fff;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    border-top: 1rem solid var(--scnd-light);
+    border-bottom: 1rem solid var(--prim);
+}
+#reviews-list li p:first-child {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--prim);
+    padding-bottom: .5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--prim);
+}
+
+#reviews-list li p:nth-child(2) {
+    text-align: right;
+    font-size: 1.2rem;
+    color: var(--grey-dark);
+}
+
+#reviews-list li p:nth-child(3) {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+    color: var(--beige);
+    background-color: var(--scnd-light);
+    display: inline-block;
+    border-radius: 3px;
+    margin: 1.5rem 0;
 }
 
 /* ====================== Queries ====================== */
