@@ -37,6 +37,7 @@ html {
     background-image: linear-gradient(to right bottom, var(--scnd-light), var(--scnd-dark));
     background-attachment: fixed;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 body,
@@ -44,18 +45,13 @@ td,
 th,
 p {
     font-family: var(--sans);
-    font-size: 10pt;
-    color: #333;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    color: var(--grey-dark);
+    line-height: 1.4;
 }
 body {
     margin: 0;
     position: relative;
-}
-ul,
-li {
-    font-size: 10pt;
-    color: #333;
 }
 
 ::-moz-selection {
@@ -72,13 +68,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
-a:hover,
-a:focus {
-    text-decoration: none;
-}
-a img {
-    border: none 0px #fff;
-}
+
 h1,
 h2,
 h3,
@@ -107,11 +97,11 @@ section {
     min-height: 100%;
 }
 #footer {
-    background-color: #444;
+    background-color: var(--grey-dark);
     color: var(--beige);
-    font-size: 8pt;
+    font-size: 1.2rem;
     letter-spacing: 1px;
-    padding: 25px;
+    padding: 2.5rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -126,33 +116,25 @@ section {
 /* ====================== Navigation ====================== */
 nav {
     width: 100%;
-    height: 80px;
-    line-height: 80px;
+    height: 8rem;
+    line-height: 8rem;
     background-color: var(--grey-dark);
     text-align: left;
     border-bottom: 1px solid var(--beige);
     text-align: center;
 }
 nav h1 {
-    margin: 0 30px;
+    margin: 0 3rem;
 }
 nav h1 a {
     color: var(--beige);
-    font-size: 16pt;
-    letter-spacing: 6px;
+    letter-spacing: .6rem;
     text-transform: uppercase;
     transition: var(--fade);
 }
 
 nav h1 a:hover {
     color: var(--prim);
-}
-
-.icon {
-    height: 50px;
-    width: 100px;
-    fill: var(--beige);
-    display: inline-block;
 }
 
 #breadcrumb {
@@ -189,15 +171,15 @@ nav h1 a:hover {
 }
 /* ====================== Map ====================== */
 #map {
-    height: 400px;
+    height: 40rem;
     width: 100%;
     background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
     width: 100%;
-    height: 80px;
-    padding: 30px;
+    height: 8rem;
+    padding: 3rem;
     background-color: var(--prim);
     border-top: 1px solid var(--beige);
     display: flex;
@@ -206,23 +188,24 @@ nav h1 a:hover {
 }
 .filter-options h2 {
     color: var(--beige);
+    font-size: 2rem;
     font-family: var(--sans);
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1;
-    flex: 0 0 230px;
+    flex: 0 0 23rem;
 }
 .filter-options select {
     border-radius: 3px;
     overflow: hidden;
     background-color: var(--beige);
-    font-size: 14pt;
-    height: 48px;
+    height: 4.5rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     width: 30%;
-    min-width: 200px;
+    min-width: 20rem;
     border: 2px solid transparent;
     flex: 1;
 }
@@ -230,18 +213,17 @@ nav h1 a:hover {
 select:focus {
     outline: none;
     border: 2px solid var(--scnd-light);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .filter-options option {
-    font-size: 16px;
+    font-size: 1.6rem;
     background-color: var(--beige);
     color: var(--scnd-light);
-    padding: 20px !important;
 }
 
 .filter-options select:last-child {
-    margin-left: 30px;
+    margin-left: 3rem;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -252,14 +234,13 @@ select:focus {
     background-color: #f3f3f3;
     list-style: outside none none;
     margin: 0;
-    padding: 30px;
+    padding: 3rem 3rem 0;
     text-align: center;
 }
 #restaurants-list li {
     background-color: #fff;
-    min-height: 380px;
-    margin-bottom: 30px;
-    width: calc(33.3333% - 20px);
+    margin-bottom: 3rem;
+    width: calc(33.3333% - 2rem);
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
@@ -270,7 +251,7 @@ select:focus {
 }
 
 #restaurants-list li:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
 }
 
 #restaurants-list .restaurant-img {
@@ -282,23 +263,23 @@ select:focus {
 }
 #restaurants-list li h1 {
     color: var(--prim);
-    font-size: 14pt;
+    font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1.4;
-    margin: 20px 20px 0;
+    margin: 2rem 2rem 0;
     text-transform: uppercase;
 }
 #restaurants-list p {
-    margin: 10px 20px 0;
-    font-size: 11pt;
+    margin: 1rem 2rem 0;
+    font-size: 1.4rem;
 }
 #restaurants-list li a {
     background-image: linear-gradient(to right bottom, var(--scnd-light), var(--scnd-dark));
     color: var(--beige);
-    font-size: 10pt;
-    margin: 15px 0 0;
-    padding: 20px 20px;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0;
+    padding: 2rem;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -399,3 +380,99 @@ select:focus {
     color: #666;
 }
 
+/* ====================== Queries ====================== */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 50%;
+    }
+
+    #restaurants-list li {
+        width: calc(50% - 15px);
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    html {
+        font-size: 45%;
+    }
+    nav h1 a {
+        letter-spacing: 2px;
+    }
+
+    #restaurants-list li {
+        width: 100%;
+    }
+
+    .filter-options {
+        height: auto;
+        background-color: var(--prim);
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        padding: 1.5rem 3rem;
+    }
+
+    .filter-options > * {
+        width: 100%;
+        margin: 1rem 2rem;
+    }
+
+    .filter-options h2 {
+        flex: 1;
+    }
+
+    .filter-options select {
+        width: 100%;
+    }
+
+    select:focus {
+        outline: none;
+        border: 2px solid var(--scnd-light);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    }
+
+    .filter-options select:last-child {
+        margin-left: 2rem;
+    }
+
+    #restaurants-list .restaurant-img {
+        margin: -15% 0 -35%;
+    }
+
+    #restaurants-list li h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 2rem 2rem 0;
+        background-color: rgba(255, 255, 255, .9);
+    }
+    #restaurants-list p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 1rem 2rem 0;
+        background-color: rgba(255, 255, 255, .8);
+    }
+
+    #restaurants-list p:last-of-type {
+        padding-bottom: 2rem;
+    }
+
+    #restaurants-list li a {
+        margin: 0;
+    }
+}
