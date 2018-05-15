@@ -458,7 +458,8 @@ select:focus {
         font-size: 50%;
     }
 
-    #restaurants-list li {
+    #restaurants-list li,
+    #reviews-list li {
         width: calc(50% - 15px);
     }
 }
@@ -472,7 +473,8 @@ select:focus {
         letter-spacing: 2px;
     }
 
-    #restaurants-list li {
+    #restaurants-list li,
+    #reviews-list li {
         width: 100%;
     }
 
@@ -532,5 +534,28 @@ select:focus {
 
     #restaurants-list li a {
         margin: 0;
+    }
+
+    /* RETAURANT PAGE ==================================================== */
+
+    #restaurant-img {
+        width: calc(100% - 6rem);
+        float: none;
+    }
+    #restaurant-cuisine {
+        margin: 0 3rem 3rem;
+        text-align: center;
+        float: none;
+    }
+    #restaurant-address {
+        float: none;
+        width: auto;
+        text-align: center;
+        margin: 3rem 3rem 0;
+    }
+    #restaurant-hours {
+        width: calc(100% - 6rem);
+        float: none;
+        margin: 3rem 3rem 0;
     }
 }
