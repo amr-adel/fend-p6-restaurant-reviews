@@ -40,10 +40,6 @@ html {
     font-size: 62.5%;
 }
 
-::-moz-focus-inner {
-    border: none;
-}
-
 body,
 td,
 th,
@@ -56,6 +52,10 @@ p {
 body {
     margin: 0;
     position: relative;
+}
+
+::-moz-focus-inner {
+    border: none !important;
 }
 
 ::-moz-selection {
@@ -71,6 +71,12 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+a:focus {
+    border: none;
+    outline: none;
+    text-decoration: underline !important;
 }
 
 h1,
@@ -408,7 +414,7 @@ select:focus {
     border-top: 1rem solid var(--scnd-light);
     border-bottom: 1rem solid var(--prim);
 }
-#reviews-list li p:first-child {
+#reviews-list .author {
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -419,13 +425,14 @@ select:focus {
     border-bottom: 1px solid var(--prim);
 }
 
-#reviews-list li p:nth-child(2) {
+#reviews-list .date {
     text-align: right;
     font-size: 1.2rem;
     color: var(--grey-dark);
+    display: block;
 }
 
-#reviews-list li p:nth-child(3) {
+#reviews-list .rating {
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -500,12 +507,6 @@ select:focus {
         width: 100%;
     }
 
-    select:focus {
-        outline: none;
-        border: 2px solid var(--scnd-light);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-    }
-
     .filter-options select:last-child {
         margin-left: 2rem;
     }
@@ -517,10 +518,10 @@ select:focus {
     #restaurants-list li h1 {
         font-size: 2.5rem;
         margin: 0;
-        padding: 2rem 2rem 0;
+        padding: 1.5rem;
         background-color: rgba(255, 255, 255, .9);
     }
-    #restaurants-list p {
+    #restaurants-list .neighborhood {
         font-size: 1.6rem;
         font-weight: 600;
         margin: 0;
@@ -528,8 +529,9 @@ select:focus {
         background-color: rgba(255, 255, 255, .8);
     }
 
-    #restaurants-list p:last-of-type {
+    #restaurants-list .address {
         padding-bottom: 2rem;
+        background-color: rgba(255, 255, 255, .8);
     }
 
     #restaurants-list li a {
