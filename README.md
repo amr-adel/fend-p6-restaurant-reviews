@@ -4,7 +4,7 @@ This is my entry for project 6 (*Restaurant Reviews App*) from Udacity's  [Front
 Find starter code and more information [HERE
 ](https://github.com/udacity/mws-restaurant-stage-1)
 
-[![Restaurant Reviews: Stage 1](/demo.jpg "Restaurant Reviews: Stage 1")](https://amr-adel.github.io/fend-p6-restaurant-reviews/)
+[![Restaurant Reviews: Stage 1](img/demo.jpg "Restaurant Reviews: Stage 1")](https://amr-adel.github.io/fend-p6-restaurant-reviews/)
 
 ### Criteria
 
